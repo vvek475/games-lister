@@ -37,9 +37,6 @@ export default function Heroface(){
         setdata(data.reverse())
         console.log(data)
     }
-    useEffect(()=>{
-        data && setdata(data.reverse())
-    },[data])
     return(
         <div className="heroface__box">
             <h1 className="heroface__title">New and trending</h1>
