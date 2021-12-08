@@ -56,13 +56,14 @@ export default function Infocontainer({suggestions_count,tags,screenshots_count,
 
                     
                     
-                    <div className="infocontainer_img_box flex mobileappear">
-                    <a target="blank" href={background_image}><img src={background_image} alt="imge"/></a>
+                   <div className="infocontainer_img_box flex mobileappear">
+                    <p>Click to view</p>
+                        <a target="blank" href={background_image}><img src={background_image} alt="imge"/></a>
                         <a target="blank" href={background_image_additional}><img src={background_image_additional} alt="imge"/></a>
                         {scvis==='less' && sc && sc.map((img)=>(
                             <a target="blank" href={img.image}><img alt="InGameSC"src={img.image}/></a>
                         ))}
-                        <p>more...<br/>{screenshots_count}+</p>
+                        <p onClick={()=>setscvis(scvis==='more...'?'less':'more...')}>{scvis}<br/>{screenshots_count}+</p>
                     </div>
 
                     {visibility && <div onClick={()=>setvisibility(false)} className="overlay_trailer_blur">
