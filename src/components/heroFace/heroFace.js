@@ -29,7 +29,6 @@ export default function Heroface(){
             return result * sortOrder;
         }
     }
-    data && data.reverse()
     function reversed(){
         fetch(`https://rawg.io/api/games?${API_KEY}&page_size=${gamescount}&page=${page}`)
         .then(resp => resp.json())
