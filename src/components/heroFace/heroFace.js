@@ -7,7 +7,7 @@ export default function Heroface(){
     const [page,setpage]=useState(1)
     const [order,setorder]=useState('Relevance')
     const [mustplay,setmustplay] = useState()
-    /* const API_KEY='key=27cf0c31c04e48cd8f697a075768c534' */
+    const API_KEY='key=27cf0c31c04e48cd8f697a075768c534'
     useEffect(()=>{
         fetch(`https://rawg.io/api/games?${API_KEY}&page_size=${gamescount}&page=${page}`)
         .then(resp => resp.json())
