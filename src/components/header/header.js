@@ -1,4 +1,4 @@
-import { useContext,useState,useEffect } from "react"
+import { useContext,useState} from "react"
 import { Link } from "react-router-dom"
 import SidebarVissibilityContext from "../../store/togglevissibility"
 
@@ -12,7 +12,7 @@ export default function Header(){
     function Search(e){
         const tosearch=search.split(' ').join('-').toLowerCase()
         e.preventDefault()
-        fetch(`https://api.rawg.io/api/games/${tosearch}?key=27cf0c31c04e48cd8f697a075768c534`)
+        fetch(`https://api.rawg.io/api/games/${tosearch}?${API_KEY}`)
         .then(resp => resp.json())
         .then((results) =>{setresult(results);console.log(results)})
         
