@@ -138,7 +138,7 @@ button{
   cursor: pointer;
 }
 .sidebar__box h2:hover{
-  color: rgb(0,0,0,0.5);
+  color: rgb(255,255,255,0.5);
 }
 .sidebar__column svg{
   width: 30px;
