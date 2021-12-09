@@ -75,8 +75,8 @@ export default function Infocontainer({suggestions_count,tags,screenshots_count,
                         <p className='mobiledisappear__block'>Platforms <br/><span class="tags__bold">{platform_detail}</span></p>
                         <p>Genre<br/><span class="tags__bold">Shooter</span></p>
                         <p>Release date<br/><span class="tags__bold">{released}</span></p>
-                        {developers && <p>Developer<br/><span class="tags__bold">{developers[0].name}</span></p>}
-                        {publishers && <p>Publisher<br/><span class="tags__bold">{publishers[0].name}</span></p>}
+                        {developers && <p>Developer<br/><span class="tags__bold">{developers.length>1 && developers[0].name}</span></p>}
+                        {publishers && <p>Publisher<br/><span class="tags__bold">{publishers.length>1 && publishers[0].name}</span></p>}
                         <p>Playtime<br/><span class="tags__bold">{playtime}</span></p>
                         <p></p>
                         <p>Website<br/><span class="tags__bold">{website}</span></p>

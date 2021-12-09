@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Gamebox({view,id,name,genres,rating_top,
+export default function Gamebox({view,id,name,genres,rating_top,slug,
     playtime,ratings_count,parent_platforms,background_image,metacritic,released}){
     var platforms=[]
     parent_platforms && parent_platforms.forEach(element => {
@@ -20,7 +20,7 @@ export default function Gamebox({view,id,name,genres,rating_top,
                         </div>
                         <span className="heroface__rating">{metacritic || 94}</span>
                     </div>
-                    <Link to={`/info/${id}`}><h2>{name}</h2></Link>
+                    <Link to={`/info/${slug}`}><h2>{name}</h2></Link>
                     <div className="customize__button__box">
                         <button className="customize__button">+ {ratings_count}</button>
                         <button className="customize__button block">
