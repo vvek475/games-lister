@@ -33,12 +33,6 @@ export default function Heroface(){
             return result * sortOrder;
         }
     }
-    function reversed(){
-        fetch(`https://rawg.io/api/games?${API_KEY}&page_size=${gamescount}&page=${page}`)
-        .then(resp => resp.json())
-        .then(({results}) => {setdata(results.reverse());console.log(results)})
-        console.log(data)
-    }
     return(
         <>
         <div className="heroface__box">
@@ -48,9 +42,6 @@ export default function Heroface(){
                 <div className="hover__display">
                 <button className="heroface__toggle__button">
                     Order By : <span className="heroface__toggle__order">{order}</span>
-                </button>
-                <button onClick={()=>reversed()} className="heroface__toggle__button mobiledisappear">
-                    Reverse
                 </button>
                     <div className="order__list">
                         <span onClick={()=>{setorder('Name');data.sort(dynamicSort('name'))}} className="order__items">Name  
