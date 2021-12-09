@@ -248,8 +248,7 @@ button{
   flex-wrap: wrap;
   margin-bottom: 10px;
   justify-content: space-between;
-  height: 100vh;
-  overflow: auto;
+
 }
 .heroface__gameboxes{
   display: flex;
