@@ -3,7 +3,7 @@ import {useState,useEffect} from 'react'
 export default function Heroface(){
     const [data,setdata] = useState()
     const [view,setview] = useState('grid')
-    const [gamescount,setgamescount]=useState(51)
+    const [gamescount,setgamescount]=useState(15)
     const [page,setpage]=useState(1)
     const [order,setorder]=useState('Relevance')
     const [mustplay,setmustplay] = useState()
@@ -49,7 +49,7 @@ export default function Heroface(){
                 <button className="heroface__toggle__button">
                     Order By : <span className="heroface__toggle__order">{order}</span>
                 </button>
-                <button onClick={()=>reversed()} className="heroface__toggle__button">
+                <button onClick={()=>reversed()} className="heroface__toggle__button mobiledisappear">
                     Reverse
                 </button>
                     <div className="order__list">
@@ -82,9 +82,7 @@ export default function Heroface(){
         </div>
         <div className="heroface__box mobiledisappear__block">
             <h1 className="heroface__title">Must Play</h1>
-            <p></p>
-            <br/>
-            <br/>
+
             
             <div className="heroface__header">
                 <div className="hover__display">
